@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <I18nProvider lang={lang}>
       <Provider store={store}>
-        <SessionProvider session={pageProps.session} refetchInterval={0}>
+        <SessionProvider session={pageProps.session} baseUrl='https://test-auth-seven.vercel.app'   refetchInterval={0}>
           <Component {...pageProps}/>
         </SessionProvider>
       </Provider>
