@@ -7,15 +7,12 @@ import { store } from '@/store/store';
 import { SessionProvider } from "next-auth/react"
 import 'antd/dist/antd.css';
 
-
-
-
 function MyApp({ Component, pageProps }: AppProps) {
   const { lang } = useTranslation('common');
   return (
     <I18nProvider lang={lang}>
       <Provider store={store}>
-        <SessionProvider session={pageProps.session} baseUrl='https://test-auth-seven.vercel.app'   refetchInterval={0}>
+        <SessionProvider session={pageProps.session} baseUrl='http://localhost2'   refetchInterval={0}>
           <Component {...pageProps}/>
         </SessionProvider>
       </Provider>
