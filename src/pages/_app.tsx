@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <I18nProvider lang={lang}>
       <Provider store={store}>
-        <SessionProvider session={pageProps.session} baseUrl='http://localhost2'   refetchInterval={0}>
+        <SessionProvider session={pageProps.session}  refetchInterval={0}>
           <Component {...pageProps}/>
         </SessionProvider>
       </Provider>
